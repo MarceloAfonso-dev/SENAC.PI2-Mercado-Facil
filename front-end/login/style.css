@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+* {
+
+    margin: 0;
+    padding: 0;
+    
+    font-family: "Rubik", sans-serif;
+
+}
+body {
+    font-family: "Rubik", sans-serif;
+}
+header {
+    height: 85px;
+    background-color:#1490D9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+}
+ header h1 {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-left: 180px;
+    padding-top: 20px;
+   
+    
+
+ }
+ .login h2{
+    color:#385084;
+   margin-top: -60px;
+   margin-bottom: 48%;
+   text-align: center;   
+   font-size: 28px; 
+
+ }
+ .login  {
+    
+    background-color: #F5F5F5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 100px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
+ }
+ input{
+    padding: 14px;
+    border: none;
+    outline: none;
+    font-size: 10px;
+    width: 230px;
+    border-radius: 15px;
+
+ }
+button {
+    background-color: #1490D9;
+    border: none;
+    padding: 8px;
+    width: 100 px;
+    border-radius: 10px;
+    color: #ffff;
+    margin-left: 50%;
+    margin-top: 30px;
+    display: block;
+    width: 40%;
+    font-size: 11px;
+    
+ }
+ button:hover {
+    background-color: #385084;
+ }
+ .botao {
+    font-size: 10px;
+ }
