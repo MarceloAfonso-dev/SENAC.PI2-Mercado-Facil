@@ -1,5 +1,0 @@
-INDEX VERSION 1.134
-/home/marcelo-afonso/Senac/PI2-Projeto/back-end/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2027054761.index
-/PI2-PROJETO/src/main/java
-/home/marcelo-afonso/Senac/PI2-Projeto/back-end/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3817588100.index
-/mercado-facil-web/src/main/java
