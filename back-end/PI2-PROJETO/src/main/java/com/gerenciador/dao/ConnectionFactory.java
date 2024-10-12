@@ -1,4 +1,5 @@
-package com.repository;
+package com.gerenciador.dao;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;

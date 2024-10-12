@@ -1,10 +1,9 @@
 package com.listeners;
 
-import com.repository.ConnectionFactory;
-
+import com.gerenciador.dao.ConnectionFactory;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
+import javax.servlet.annotation.WebListener; 
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;

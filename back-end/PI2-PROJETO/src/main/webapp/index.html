@@ -10,31 +10,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercado Fácil</title>
 </head>
-<body>
-    <header>
-        <h1>Mercado Fácil</h1>
-        <div class="logo">
-            <div class="logoimg">
+<body onload="mostrarAlertaErro()">
+    <header class="header">
+        <div class="sessao-esquerda">
+            <img src="static/images/dashboard/store.png"  class="header-icon">
+            <span class="header-title">Mercado Fácil</span>
+        </div>
 
-
-            </div>
+        <div class="sessao-direita">
+            <a href="#"></a><span class="logout-text">Sair</span>
+            <img src="static/images/dashboard/logout.png"  class="logout-icon">
         </div>
     </header>
+    
     <div class="banner">
 
     </div>
 
-     <div class="login">
-    	<form>
-    		<label>Login:</label>
-    		<input type="text" id="login"></input>	
+<div class="login">
+        <h2>Acesso ao Sistema</h2>
+        <form method="post" action="/PI2-PROJETO/login">
+            <div>
+                <input type="text" id="login" name="login" placeholder="Email" required>
+                <br/><br/>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            <div>
+                <button type="submit">Entrar</button>
+            </div>
+        </form>
+    </div>
+
    		</form>
 
 
       </div>
      
 
-     
+     <script type="text/javascript" src="./static/js/login.js"></script>
 
 </body>
 </html>
