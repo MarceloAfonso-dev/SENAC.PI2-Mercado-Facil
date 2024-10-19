@@ -11,7 +11,25 @@ public class UsuarioDAO {
     public UsuarioDAO(Connection connection) {
         this.connection = connection;
     }
+    
+ // Método para retornar lista de IDs de funcionários que não estão relacionados a usuarios_internos
+    public List<Integer> listarFuncionariosSemUsuario() throws SQLException {
+        String sql = "SELECT f.Id_Funcionario FROM Funcionarios f " +
+                     "LEFT JOIN Usuario_Interno u ON f.Id_Funcionario = u.Id_Funcionario " +
+                     "WHERE u.Id_Funcionario IS NULL";
 
+        List<Integer> funcionariosSemUsuario = new ArrayList<>();
+
+        try (PreparedStatement stmt = connection.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) {
+                funcionariosSemUsuario.add(rs.getInt("Id_Funcionario"));
+            }
+        }
+
+        return funcionariosSemUsuario;
+    }
+    
  // Método para buscar usuário por email e senha
     public Usuario buscarPorEmailSenha(String email, String senha) throws SQLException {
         String sql = "SELECT * FROM usuario_interno WHERE Email = ? AND Senha = ?";

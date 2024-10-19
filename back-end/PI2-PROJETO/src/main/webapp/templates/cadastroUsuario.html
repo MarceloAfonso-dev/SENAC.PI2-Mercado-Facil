@@ -1,0 +1,99 @@
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Criar Conta</title>
+        <link rel="stylesheet" href="static/css/cadastroUser.css">
+    </head>
+    <body>
+        <header>
+            <img src="static/images/cadastroUsuario/Logo.svg" alt="Logo">
+            <h1>Mercado Fácil</h1>
+        </header>
+        <section>
+            <main>
+                <h1>Criar Usuário</h1>
+                <form id="formCadastroUsuario"> <!-- Adicionei o id ao formulário -->
+                    <div class="row-form">
+                        <div class="column-form">
+                            <label for="nome">Nome:</label>
+                            <div class="form-input">
+                                <img src="static/images/cadastroUsuario/person.svg">
+                                <input type="text" id="nome" name="nome" placeholder="Nome e Sobrenome">
+                            </div>
+                        </div>
+
+                        <div class="column-form">
+                            <label for="senha">Senha:</label>
+                            <div class="form-input">
+                                <img src="static/images/cadastroUsuario/lock.svg">
+                                <input type="password" id="senha" name="senha" placeholder="Pelo menos 6 caracteres">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-form">
+                        <div class="column-form">
+                            <label for="email">Email:</label>
+                            <div class="form-input">
+                                <img src="static/images/cadastroUsuario/mail.svg">
+                                <input type="email" id="email" name="email" placeholder="email@gmail.com">
+                            </div>
+                        </div>
+
+                        <div class="column-form">
+                            <label for="senhaConfirm">Confirme a Senha:</label>
+                            <div class="form-input">
+                                <img src="static/images/cadastroUsuario/lock.svg">
+                                <input type="password" id="senhaConfirm" name="senhaConfirm" placeholder="Repita os caracteres">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-form">
+                        <div class="column-form">
+                            <label for="cpf">CPF:</label>
+                            <div class="form-input">
+                                <img src="static/images/cadastroUsuario/id_card.svg">
+                                <input type="text" id="cpf" name="cpf" placeholder="888.888.888-12">
+                            </div>
+                        </div>
+
+                        <div class="column-form">
+                            <label for="idFuncionario">ID Funcionário:</label>
+                            <div class="form-input">
+                                <img src="static/images/cadastroUsuario/id_card.svg">
+                                <!-- Removido input, apenas o select -->
+                                <select id="idFuncionario" name="idFuncionario">
+                                    <option value="">Selecione um funcionário</option>
+                                    <!-- As opções serão preenchidas pelo JavaScript -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column-form">
+                        <label for="grupo">Grupo:</label>
+                        <div class="form-input">
+                            <img src="static/images/cadastroUsuario/work.svg">
+                            <select name="grupo" id="grupo">
+                                <option value="cliente">Cliente</option>
+                                <option value="fornecedor">Fornecedor</option>
+                            </select>
+                        </div>  
+                    </div>
+                    <button type="submit">Cadastrar Usuário</button>
+                </form>
+                <div id="mensagem"></div> <!-- Adicionei para exibir mensagens -->
+            </main>
+        </section>
+
+        <footer>
+            <h2>
+                © 2024 Code Commiters. All Rights Reserved.
+            </h2>
+        </footer>
+
+        <script src="static/js/idsFuncionarios.js"></script>
+    </body>
+</html>
