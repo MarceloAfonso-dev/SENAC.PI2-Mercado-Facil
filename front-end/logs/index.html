@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Fácil</title>
+</head>
+<body>
+    
+    <header>
+        <div class="header-content">
+            <h1>Mercado Fácil</h1>
+            <a href="#" class="logout">Sair</a>
+            <div class="logo">
+                <div class="logoimg"></div>
+            </div>
+           
+        </div>
+    </header>
+
+    <main>
+        <section class="visualizacao">
+            <h1>Histórico de Logs</h1>
+            <div class="filtro">
+                <h2> Filtrar visualização</h2>
+                <select id="pergunta" name="pergunta">
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="opcao1">Opção 1</option>
+                    <option value="opcao2">Opção 2</option>
+                    <option value="opcao3">Opção 3</option>
+                </select>
+
+                <div class="campo">
+                    <label for="data-inicial">Data Inicial</label>
+                    <input type="date" id="data-inicial">
+                </div>
+
+                <div class="campo">
+                    <label for="data-final">Data Final</label>
+                    <input type="date" id="data-final">
+                </div>
+
+                <div class="campo">
+                    <label for="usuario">Usuário</label>
+                    <select id="usuario">
+                        <option value="">Selecione um usuário</option>
+                        <option value="usuario1">Usuário 1</option>
+                        <option value="usuario2">Usuário 2</option>
+                    </select>
+                </div>
+
+            </div>
+        </section>
+        
+      
+           <section class="logs">
+               <div class="grafico">
+                <canvas id="graficoo1" ></canvas>
+                <script>
+                    const ctx = document.getElementById('graficoo1');
+                  
+                    new Chart(ctx, {
+                      type: 'bar',
+                      data: {
+                        labels: ['Dia 14 (Domingo) ', 'Dia 15 (Segunda)', 'Dia 16 (Terça)', 'Dia 17 (Quarta)', 'Dia 18 (Quinta)', 'Dia 19 (Sexta)', 'Dia 20 (Sábado)'],
+                        datasets: [{
+                          label: 'Logs de Logins (3,456 registrados)',
+                          data: [1, 6, 1, 2, 0, 4, 3],
+                          backgroundColor: '#1490D9',
+                          borderWidth: 1
+                        }]
+                      },
+                      options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    },
+    plugins: {
+      legend: {
+        display: true,
+        position: 'right',
+      title: {
+        display: true,
+        text: 'Período: 14/01/2024  - 20/01/2024',
+        padding: {
+          top: 10,
+          bottom: 10
+        }
+      }
+    }
+  }
+}});
+
+
+            </script>
+
+               </div>
+
+
+
+           </section>
+
+  
+    </main>
+
+    <footer>
+        © 2024 Code Commiters. Todos os Direitos Reservados.
+    </footer>
+</body>
+</html>
